@@ -2,10 +2,13 @@
 
 namespace Laragear\Clipboard;
 
+use Illuminate\Support\Traits\ForwardsCalls;
 use function value;
 
 class Clipboard
 {
+    use ForwardsCalls;
+
     /**
      * Create a new Clipboard instance.
      *
@@ -19,12 +22,25 @@ class Clipboard
     /**
      * Copies the value into the clipboard.
      *
-     * @param  mixed  $value
-     * @return mixed
+     * @template TValue
+     * @param  TValue|mixed  $value
+     * @return TValue|mixed
      */
     public function copy(mixed $value): mixed
     {
         return $this->value = $value;
+    }
+
+    /**
+     * Clones the object into the clipboard
+     *
+     * @template TValue
+     * @param  TValue|mixed  $value
+     * @return TValue|mixed
+     */
+    public function clone(object $value): mixed
+    {
+        return $this->value = clone $value;
     }
 
     /**
@@ -76,5 +92,17 @@ class Clipboard
     public function clear(): void
     {
         $this->value = null;
+    }
+
+    /**
+     * Pass through all methods to the copied value object.
+     *
+     * @param  string  $method
+     * @param  array  $parameters
+     * @return void
+     */
+    public function __call(string $method, array $parameters)
+    {
+        return $this->forwardCallTo($this->value, $method, $parameters);
     }
 }

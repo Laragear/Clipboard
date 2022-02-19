@@ -5,8 +5,8 @@ namespace Laragear\Clipboard\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @method static void sear(mixed $value)
- * @method static void copy(mixed $value)
+ * @method static mixed copy(mixed $value)
+ * @method static mixed clone(object $value)
  * @method static mixed paste(mixed $default = null)
  * @method static mixed pull(mixed $default = null)
  * @method static bool clear()

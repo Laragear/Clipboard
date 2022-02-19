@@ -55,6 +55,7 @@ Copying a value will copy the reference of the object, or the value if is a prim
 
 ```php
 use Laragear\Clipboard\Facades\Clipboard;
+use App\Models\Article;
 
 $article = Article::find(5);
 
@@ -70,6 +71,28 @@ Pasting will paste the value how many times you want. It accepts a default value
 ```php
 // Paste a value
 Clipboard::paste()->title; // 'The new title'
+```
+
+#### Clone
+
+Sometimes you may want to actually _clone_ the object instead of copy its reference. For these cases, use the `clone()` method.
+
+```php
+use Laragear\Clipboard\Facades\Clipboard;
+use App\Models\Article;
+
+$article = Article::make(['title' => 'Original title']);
+
+// Copy a value
+Clipboard::clone($article);
+```
+
+Since it's a clone, the original variable will be different from the one pasted afterward.
+
+```php
+$article->title = 'Different title';
+
+echo Clipboard::paste()->title; // "Original title"
 ```
 
 ### Cut and pull
@@ -109,6 +132,23 @@ Clipboard::copy('I am going to disspear.');
 Clipboard::clear();
 
 echo Clipboard::paste(); // ''
+```
+
+### Method pass-through
+
+For your convenience, you don't need to retrieve the Clipboard object to do something. The Clipboard will pass through all methods calls to the copied or cloned object.
+
+```php
+use Laragear\Clipboard\Facades\Clipboard;
+use App\Models\Article;
+
+$article = Article::make(['title' => 'Original title']);
+
+// Copy a value
+Clipboard::copy($article);
+
+// Some lines after...
+Clipboard::save();
 ```
 
 ## How this works?

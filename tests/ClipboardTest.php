@@ -17,6 +17,27 @@ class ClipboardTest extends TestCase
         $this->clipboard = $this->app->make(RealClipboard::class);
     }
 
+    public function test_clones_object(): void
+    {
+        $object = new Fluent(['foo' => 'bar']);
+
+        $cloned = Clipboard::clone($object);
+
+        static::assertNotSame($object, $cloned);
+        static::assertNotSame($object, Clipboard::paste());
+    }
+
+    public function test_pass_through_calls_to_object(): void
+    {
+        $object = new Fluent(['foo' => 'bar']);
+
+        Clipboard::copy($object);
+
+        Clipboard::foo('baz');
+
+        static::assertSame('baz', $object->foo);
+    }
+
     public function test_cuts_value(): void
     {
         $value = 'test';
