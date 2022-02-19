@@ -44,8 +44,10 @@ The Clipboard works like your normal clipboard:
 |-----------|-------------------------------------------------------------------------------|
 | `copy()`  | Copies a value into the clipboard.                                            |
 | `cut()`   | Moves a value into the clipboard, assigning it `null` on the current context. |
+| `clone()` | Clones an object into the clipboard.                                          |
 | `paste()` | Pastes a value previously pasted in the clipboard.                            |
 | `pull()`  | Moves a value into the clipboard, assigning it `null` on the current context. |
+| `clear()` | Clears the clipboard value.                                                   |
 
 Using the Clipboard to move around values inside the application allows you to avoid registering things into the Service Container unnecessarily, or moving a value around using functions or the cache.
 
