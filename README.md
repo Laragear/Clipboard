@@ -85,7 +85,7 @@ use App\Models\Article;
 
 $article = Article::make(['title' => 'Original title']);
 
-// Copy a value
+// Clone an object
 Clipboard::clone($article);
 ```
 
