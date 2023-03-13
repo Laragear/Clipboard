@@ -11,8 +11,6 @@ class Clipboard
 
     /**
      * Create a new Clipboard instance.
-     *
-     * @param  mixed  $value
      */
     public function __construct(protected mixed $value = null)
     {
@@ -21,10 +19,6 @@ class Clipboard
 
     /**
      * Copies the value into the clipboard.
-     *
-     * @template TValue
-     * @param  TValue|mixed  $value
-     * @return TValue|mixed
      */
     public function copy(mixed $value): mixed
     {
@@ -33,21 +27,14 @@ class Clipboard
 
     /**
      * Clones the object into the clipboard
-     *
-     * @template TValue
-     * @param  TValue|mixed  $value
-     * @return TValue|mixed
      */
-    public function clone(object $value): mixed
+    public function clone(object $value): object
     {
         return $this->value = clone $value;
     }
 
     /**
      * Moves the value into the clipboard, assigning it null afterwards.
-     *
-     * @param  mixed  $value
-     * @return void
      */
     public function cut(mixed &$value): void
     {
@@ -58,10 +45,6 @@ class Clipboard
 
     /**
      * Pastes the value into the context, without removing it from the clipboard.
-     *
-     * @template TValue
-     * @param  TValue|null  $default
-     * @return TValue|mixed
      */
     public function paste(mixed $default = null): mixed
     {
@@ -70,10 +53,6 @@ class Clipboard
 
     /**
      * Moves the value into the context, emptying the clipboard.
-     *
-     * @template TValue
-     * @param  TValue|null  $default
-     * @return TValue|mixed
      */
     public function pull(mixed $default = null): mixed
     {
@@ -86,8 +65,6 @@ class Clipboard
 
     /**
      * Clears the clipboard
-     *
-     * @return void
      */
     public function clear(): void
     {
@@ -96,10 +73,6 @@ class Clipboard
 
     /**
      * Pass through all methods to the copied value object.
-     *
-     * @param  string  $method
-     * @param  array  $parameters
-     * @return void
      */
     public function __call(string $method, array $parameters)
     {

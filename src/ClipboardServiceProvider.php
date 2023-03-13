@@ -2,7 +2,8 @@
 
 namespace Laragear\Clipboard;
 
-use Illuminate\Contracts\Http\Kernel;
+use Illuminate\Contracts\Http\Kernel as HttpKernelContract;
+use Illuminate\Foundation\Http\Kernel as LaravelHttpKernel;
 use Illuminate\Support\ServiceProvider;
 
 class ClipboardServiceProvider extends ServiceProvider
@@ -25,8 +26,10 @@ class ClipboardServiceProvider extends ServiceProvider
      * @param  \Illuminate\Contracts\Http\Kernel  $kernel
      * @return void
      */
-    public function boot(Kernel $kernel): void
+    public function boot(HttpKernelContract $kernel): void
     {
-        $kernel->pushMiddleware(Http\Middleware\ClearClipboard::class);
+        if ($kernel instanceof LaravelHttpKernel) {
+            $kernel->pushMiddleware(Http\Middleware\ClearClipboard::class);
+        }
     }
 }
