@@ -1,5 +1,8 @@
 # Clipboard 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/laragear/clipboard.svg)](https://packagist.org/packages/laragear/clipboard) [![Latest stable test run](https://github.com/Laragear/Clipboard/workflows/Tests/badge.svg)](https://github.com/Laragear/Clipboard/actions) [![Codecov coverage](https://codecov.io/gh/Laragear/Clipboard/branch/1.x/graph/badge.svg?token=Io2axyOxnY)](https://codecov.io/gh/Laragear/Clipboard) [TODO: Add CodeClimate badge] [![Laravel Octane Compatibility](https://img.shields.io/badge/Laravel%20Octane-Compatible-success?style=flat&logo=laravel)](https://laravel.com/docs/9.x/octane#introduction)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/laragear/clipboard.svg)](https://packagist.org/packages/laragear/clipboard)
+[![Latest stable test run](https://github.com/Laragear/Clipboard/workflows/Tests/badge.svg)](https://github.com/Laragear/Clipboard/actions)
+[![Codecov coverage](https://codecov.io/gh/Laragear/Clipboard/branch/1.x/graph/badge.svg?token=Io2axyOxnY)](https://codecov.io/gh/Laragear/Clipboard)
+[TODO: Add CodeClimate badge] [![Laravel Octane Compatibility](https://img.shields.io/badge/Laravel%20Octane-Compatible-success?style=flat&logo=laravel)](https://laravel.com/docs/9.x/octane#introduction)
 
 Copy, cut & paste in your application. You read that right.
 
@@ -45,8 +48,8 @@ The Clipboard works like your normal clipboard:
 | `copy()`  | Copies a value into the clipboard.                                            |
 | `cut()`   | Moves a value into the clipboard, assigning it `null` on the current context. |
 | `clone()` | Clones an object into the clipboard.                                          |
-| `paste()` | Pastes a value previously pasted in the clipboard.                            |
-| `pull()`  | Moves a value into the clipboard, assigning it `null` on the current context. |
+| `paste()` | Pastes a value previously copied in the clipboard.                            |
+| `pull()`  | Pastes a value previously copied, removing it from the Clipboard.             |
 | `clear()` | Clears the clipboard value.                                                   |
 
 Using the Clipboard to move around values inside the application allows you to avoid registering things into the Service Container unnecessarily, or moving a value around using functions or the cache.
@@ -174,4 +177,4 @@ If you discover any security related issues, please email darkghosthunter@gmail.
 
 This specific package version is licensed under the terms of the [MIT License](LICENSE.md), at time of publishing.
 
-[Laravel](https://laravel.com) is a Trademark of [Taylor Otwell](https://github.com/TaylorOtwell/). Copyright © 2011-2022 Laravel LLC.
+[Laravel](https://laravel.com) is a Trademark of [Taylor Otwell](https://github.com/TaylorOtwell/). Copyright © 2011-2023 Laravel LLC.

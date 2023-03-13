@@ -9,7 +9,7 @@
         {
             "name": "Italo Israel Baeza Cabrera",
             "email": "DarkGhostHunter@Gmail.com",
-            "homepage": "https://patreon.com/packagesforlaravel"
+            "homepage": "https://github.com/sponsors/DarkGhostHunter"
         }
     ],
     "support": {
@@ -17,13 +17,12 @@
         "issues": "https://github.com/Laragear/Clipboard/issues"
     },
     "require": {
-        "php": "^8.0.2",
-        "illuminate/support": "9.*",
-        "illuminate/container": "9.*"
+        "php": "8.*",
+        "illuminate/support": "9.*|10.*",
+        "illuminate/container": "9.*|10.*"
     },
     "require-dev": {
-        "orchestra/testbench": "7.*",
-        "phpunit/phpunit": "^9.5"
+        "orchestra/testbench": "^7.22|8.*"
     },
     "autoload": {
         "psr-4": {
@@ -54,16 +53,8 @@
     },
     "funding": [
         {
-            "type": "Patreon",
-            "url": "https://patreon.com/PackagesForLaravel"
-        },
-        {
-            "type": "Ko-Fi",
-            "url": "https://ko-fi.com/DarkGhostHunter"
-        },
-        {
-            "type": "Buy me a cofee",
-            "url": "https://www.buymeacoffee.com/darkghosthunter"
+            "type": "GitHub Sponsorship",
+            "url": "https://github.com/sponsors/DarkGhostHunter"
         },
         {
             "type": "Paypal",
