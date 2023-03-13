@@ -19,7 +19,7 @@
     "require": {
         "php": "8.*",
         "illuminate/support": "9.*|10.*",
-        "illuminate/container": "9.*|10.*"
+        "illuminate/events": "9.*|10.*"
     },
     "require-dev": {
         "orchestra/testbench": "^7.22|8.*"
