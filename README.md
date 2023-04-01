@@ -1,8 +1,9 @@
 # Clipboard 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/laragear/clipboard.svg)](https://packagist.org/packages/laragear/clipboard)
 [![Latest stable test run](https://github.com/Laragear/Clipboard/workflows/Tests/badge.svg)](https://github.com/Laragear/Clipboard/actions)
-[![Codecov coverage](https://codecov.io/gh/Laragear/Clipboard/branch/1.x/graph/badge.svg?token=Io2axyOxnY)](https://codecov.io/gh/Laragear/Clipboard)
-[TODO: Add CodeClimate badge] [![Laravel Octane Compatibility](https://img.shields.io/badge/Laravel%20Octane-Compatible-success?style=flat&logo=laravel)](https://laravel.com/docs/9.x/octane#introduction)
+[![codecov](https://codecov.io/gh/Laragear/Clipboard/branch/main/graph/badge.svg?token=Io2axyOxnY)](https://codecov.io/gh/Laragear/Clipboard)
+[![Maintainability](https://api.codeclimate.com/v1/badges/eb5b17468001eb81923d/maintainability)](https://codeclimate.com/github/Laragear/Clipboard/maintainability)
+[![Laravel Octane Compatibility](https://img.shields.io/badge/Laravel%20Octane-Compatible-success?style=flat&logo=laravel)](https://laravel.com/docs/9.x/octane#introduction)
 
 Copy, cut & paste in your application. You read that right.
 
